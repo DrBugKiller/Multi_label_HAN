@@ -81,9 +81,7 @@ def save_multi_doc(namelist):#写入本地
     for i in namelist:
         get_multi_charge_from_CAIL(i[0],i[1])
 
-save_multi_doc(namelist)
-
-
+# save_multi_doc(namelist)
 
 def get_zm_dict(train,test,valid):
     #zm to index
@@ -123,4 +121,4 @@ def load_zm_dic(zm_dic_file):
     zm_dic=json.loads(f.read())
     f.close()
     return zm_dic
-zm_dic=load_zm_dic('.\data\\zm_dic.json')
+
