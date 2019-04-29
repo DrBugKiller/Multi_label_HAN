@@ -1,15 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2019/4/25 10:08
 # @Author  : DrMa
-# import torch
-# from torch.autograd import Variable
-# x=Variable(torch.FloatTensor([[0.1, 0.2, 0.4, 0.8],[0.1, 0.2, 0.4, 0.8]]))
-# y=Variable(torch.LongTensor([[1,3, -1, -1],[1,3, -1, -1]]))
-# loss=torch.nn.MultiLabelMarginLoss(size_average=False)
-# output=loss(x,y)
-# print(x)
-# print(y)
-# print(output)
+
 import tensorflow as tf
 import numpy as np
 def My_func(xs, ys):
@@ -41,7 +33,7 @@ def multiLabelMarginLoss(tensor_a, tensor_b):
     return tile_tensor_a
 
 a=tf.constant([[0.1, 0.2, 0.4, 0.8],[0.1, 0.2, 0.4, 0.8]])
-b=tf.constant([[0,3, -1, -1],[0,3, -1, -1]])
+b=tf.constant([[0,3,-1,-1],[0,3,-1,-1]])
 c=multiLabelMarginLoss(a,b)
 sess = tf.Session()
 loss=sess.run(c)
